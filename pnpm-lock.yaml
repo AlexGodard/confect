@@ -623,6 +623,25 @@ importers:
         specifier: 5.0.3
         version: 5.0.3(@types/node@26.6.5)(@vitest/browser-preview@4.1.11)(@vitest/coverage-v8@5.0.3)(happy-dom@20.12.0)(vite@8.3.4(@types/node@26.6.5)(esbuild@0.28.2)(jiti@1.21.7)(tsx@4.23.15)(yaml@2.9.0))
 
+  packages/server/bench/per-call:
+    dependencies:
+      '@confect/core':
+        specifier: workspace:*
+        version: link:../../../core
+      '@confect/server':
+        specifier: workspace:*
+        version: link:../..
+      convex:
+        specifier: 1.46.0
+        version: 1.46.0(react@19.3.0)
+      effect:
+        specifier: 4.0.4
+        version: 4.0.4
+    devDependencies:
+      '@confect/cli':
+        specifier: workspace:*
+        version: link:../../../cli
+
   packages/server/test/local-backend/fixtures:
     dependencies:
       '@confect/core':
@@ -680,7 +699,7 @@ importers:
         version: 1.46.0(react@19.3.0)
       convex-test:
         specifier: '>=0.0.50 <0.1.0'
-        version: 0.0.56(convex@1.46.0(react@19.3.0))
+        version: 0.0.60(convex@1.46.0(react@19.3.0))
     devDependencies:
       '@types/node':
         specifier: 26.6.5
@@ -4272,11 +4291,6 @@ packages:
       zod:
         optional: true
 
-  convex-test@0.0.56:
-    resolution: {integrity: sha512-dLYXlQjKFoGqvjAmPzyLgb2HsYI7iLo1iuNTU2DZmSrMRLWosYk94erjSU67GG5ovfP6+MjX8RJO+ebhmL6QYA==}
-    peerDependencies:
-      convex: 1.46.0
-
   convex-test@0.0.60:
     resolution: {integrity: sha512-qCAFx+CO6bmpXNc9s1jZvw8NJPS4yM074ib87PUY675FsiaRRW4ALotEB+RbVCYDRMYxh623KMnYZBlrMJIv1Q==}
     peerDependencies:
@@ -6505,10 +6519,6 @@ packages:
 
   postcss@8.5.23:
     resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
-    engines: {node: ^10 || ^12 || >=14}
-
-  postcss@8.5.28:
-    resolution: {integrity: sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==}
     engines: {node: ^10 || ^12 || >=14}
 
   postcss@8.5.29:
@@ -10231,7 +10241,7 @@ snapshots:
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
     optional: true
 
   '@typescript-eslint/project-service@8.71.0(supports-color@10.2.2)(typescript@7.0.2)':
@@ -10481,7 +10491,7 @@ snapshots:
       '@oxc-project/runtime': 0.148.0
       '@oxc-project/types': 0.148.0
       lightningcss: 1.33.0
-      postcss: 8.5.28
+      postcss: 8.5.29
       yuku-codegen: 0.9.5
       yuku-parser: 0.9.5
     optionalDependencies:
@@ -11193,10 +11203,6 @@ snapshots:
       react: 19.3.0
       typescript: 7.0.2
       zod: 4.3.6
-
-  convex-test@0.0.56(convex@1.46.0(react@19.3.0)):
-    dependencies:
-      convex: 1.46.0(react@19.3.0)
 
   convex-test@0.0.60(convex@1.46.0(react@19.3.0)):
     dependencies:
@@ -12260,9 +12266,9 @@ snapshots:
 
   happy-dom@20.12.0:
     dependencies:
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
       '@types/whatwg-mimetype': 3.0.2
-      '@types/ws': 8.18.1
+      '@types/ws': 8.18.2
       buffer-image-size: 0.6.4
       entities: 7.0.1
       whatwg-mimetype: 3.0.0
@@ -12274,9 +12280,9 @@ snapshots:
 
   happy-dom@20.14.3:
     dependencies:
-      '@types/node': 26.6.4
+      '@types/node': 26.6.5
       '@types/whatwg-mimetype': 3.0.2
-      '@types/ws': 8.18.1
+      '@types/ws': 8.18.2
       buffer-image-size: 0.6.4
       entities: 7.0.1
       whatwg-mimetype: 3.0.0
@@ -14139,12 +14145,6 @@ snapshots:
   postcss-value-parser@4.2.0: {}
 
   postcss@8.5.23:
-    dependencies:
-      nanoid: 3.3.19
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
-  postcss@8.5.28:
     dependencies:
       nanoid: 3.3.19
       picocolors: 1.1.1

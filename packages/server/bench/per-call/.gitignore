@@ -1,0 +1,5 @@
+out/
+results-*.json
+profiles/
+.convex/
+.env.local

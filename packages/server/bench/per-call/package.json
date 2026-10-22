@@ -1,0 +1,19 @@
+{
+  "name": "@confect/server-per-call-bench",
+  "description": "Matched plain-Convex and Confect functions for per-call cost measurement on a local backend.",
+  "version": "0.0.0",
+  "dependencies": {
+    "@confect/core": "workspace:*",
+    "@confect/server": "workspace:*",
+    "convex": "*",
+    "effect": "*"
+  },
+  "devDependencies": {
+    "@confect/cli": "workspace:*"
+  },
+  "private": true,
+  "scripts": {
+    "bench": "node run.mjs"
+  },
+  "type": "module"
+}
